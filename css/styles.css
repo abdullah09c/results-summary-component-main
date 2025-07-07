@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(221, 100%, 96%);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: clamp(14px, 1vw, 24px);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: auto;
+  grid-template-areas: "card1 card2";
+  width: 45vw;
+}
+
+.card1 {
+  grid-area: card1;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+  z-index: 1;
+}
+
+.card1 p:first-child {
+  margin: 1em 2em;
+  font-size: clamp(20px, 1.5vw, 40px);
+  color: hsl(241, 100%, 89%);
+}
+
+.card1 p:last-child {
+  margin: 1em 1em;
+  color: hsl(241, 100%, 89%);
+  padding: 20px;
+}
+
+.card1 h2 {
+  font-size: clamp(28px, 2vw, 48px);
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(
+    hsla(241, 81%, 54%, 0.9),
+    hsla(252, 100%, 67%, 0.2)
+  );
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  margin: 1em auto;
+  margin-bottom: 2em;
+}
+
+.score span:first-child {
+  font-size: 5em;
+  font-weight: 800;
+}
+
+.score span:last-child {
+  color: hsl(241, 100%, 89%);
+}
+
+.card2 {
+  grid-area: card2;
+  display: flex;
+  flex-direction: column;
+  background: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  position: relative;
+  right: 8%;
+  justify-content: center;
+  align-items: center;
+}
+
+.card2 ul {
+  list-style-type: none;
+}
+
+.content {
+  width: 15vw;
+  text-align: left;
+}
+
+li {
+  width: 100%;
+}
+
+li span:last-child {
+  color: hsl(224, 30%, 27%);
+}
+
+.reaction,
+.verbal,
+.memory,
+.visual {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reaction {
+  color: hsl(0, 100%, 67%);
+  background-color: hsla(0, 100%, 67%, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.memory {
+  color: hsl(39, 100%, 56%);
+  background-color: hsla(39, 100%, 56%, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.verbal {
+  color: hsl(166, 100%, 37%);
+  background-color: hsla(166, 100%, 37%, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.visual {
+  color: hsl(234, 85%, 45%);
+  background-color: hsla(234, 85%, 45%, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+button {
+  background: hsl(224, 30%, 27%);
+  color: hsl(0, 0%, 100%);
+  padding: 15px;
+  border-radius: 30px;
+  font-size: clamp(16px, 1vw, 22px);
+  width: 100%;
+  margin-top: 10%;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 80vw;
+  }
+  .content {
+    width: 26vw;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #fff;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-row: 1fr 1fr;
+    grid-template-areas:
+      "card1"
+      "card2";
+    width: 100%;
+  }
+  .card1 {
+    height: auto;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .score {
+    height: 150px;
+    width: 150px;
+  }
+  .card2 {
+    position: static;
+    padding: 10px 0;
+  }
+  .content {
+    width: 70vw;
+  }
+}
