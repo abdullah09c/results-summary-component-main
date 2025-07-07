@@ -183,7 +183,7 @@ button:hover {
   .container {
     display: grid;
     grid-template-columns: auto;
-    grid-row: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
       "card1"
       "card2";
