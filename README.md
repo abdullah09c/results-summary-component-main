@@ -27,7 +27,7 @@ This is a solution to the [Results summary component challenge on Frontend Mento
 ### Links
 
 - Solution URL: [Solution URL here](https://github.com/abdullah09c/results-summary-component-main.git)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live site URL here](https://abdullah09c.github.io/results-summary-component-main/)
 
 ## My process
 
